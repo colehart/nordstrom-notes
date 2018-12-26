@@ -38,21 +38,21 @@ Deployed with:
 - Serverless.js
 
 ## Project Requirements
-> Build a simple note taking app which consists of two views:
->   1. A form/set of inputs that collects two pieces of information.
->       • A text input to a max of 250 characters.
->       • A dropdown called “Tags” which contains three options: Work, Personal, Hobby
+> Build a simple note taking app which consists of two views:  
+>   1. A form/set of inputs that collects two pieces of information.  
+>     • A text input to a max of 250 characters.  
+>     • A dropdown called “Tags” which contains three options: Work, Personal, Hobby
 >   2. All of the notes you have already written are shown in a list, which can be filtered by date and tag. These can be filtered on the front-end, or through the API layer, whatever you prefer.
 
-![Provided Schema Design](https://github.com/colehart/allyship/blob/master/src/assets/images/desktop%E2%80%93%201.png "Provided Schema Design")
+![Provided Schema Design](https://github.com/colehart/nordstrom-notes/blob/master/public/images/system-design.png "Provided Schema Design")
 
 ## Wireframe
 Nordstrom Notes is a single page web app with a Take Note view to create a new note and a Notable Notes view to see all your notes.
 
-### Take Note View ('http://localhost:3000/')
-![Take Note Page](https://github.com/colehart/allyship/blob/master/src/assets/images/desktop%E2%80%93%201.png "Take Note Wireframe")
+### Take Note View - 'http://localhost:3000/'
+![Take Note Page](https://github.com/colehart/nordstrom-notes/blob/master/public/images/take-note.png "Take Note Wireframe")
 
-### Notable Notes View ('http://localhost:3000/notes')
-![Notable Notes Page](https://github.com/colehart/allyship/blob/master/src/assets/images/desktop-2.png "Notable Notes Wireframe")
+### Notable Notes View - 'http://localhost:3000/notes'
+![Notable Notes Page](https://github.com/colehart/nordstrom-notes/blob/master/public/images/images/notable-notes.png "Notable Notes Wireframe")
 
 Thanks for the opportunity to learn about AWS and Serverless!
