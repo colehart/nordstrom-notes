@@ -26,6 +26,23 @@ export const Header = () => {
           alt='The Nordstrom Notes logo'
         />
       </Link>
+      <nav className='h-nav-group'>
+        <NavLink
+          exact to='/'
+          className="h-take-note btn"
+          aria-label='Click to return to the Take Note form'
+        >
+          Take Note
+        </NavLink>
+        <NavLink
+          exact to='/notes'
+          className="h-notable-notes btn"
+          aria-label='Click to view your notable notes'
+        >
+          Notable Notes
+          {/* <span className='h-badge'>{checkSaved() || 0}</span> */}
+        </NavLink>
+      </nav>
     </header>
   )
 }

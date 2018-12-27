@@ -11,15 +11,14 @@
 }
 
 .btn {
-  width: 125px;
-  height: 50px;
+  width: 150px;
+  height: 32.5px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   text-decoration: none;
-  text-align: center;
-  color: white;
-  border-radius: 3px;
+  font-size: 1.15rem;
+  color: var(--charcoal);
 }
 
 .btn:hover,
