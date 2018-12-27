@@ -4,8 +4,6 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: var(--denim);
-  box-shadow: 1px 1px 1px 1px var(--denim);
 }
 
 .hidden {
@@ -15,7 +13,6 @@
 .btn {
   width: 125px;
   height: 50px;
-  background-color: var(--coral);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,36 +25,27 @@
 .btn:hover,
 .btn:focus,
 .active {
-  background-color: var(--turquoise);
+  border-bottom: var(--medium-gray);
 }
 
 .btn:active {
   background-color: #498D93;
 }
 
-.h-logo-group:active {
+.h-logo img {
+  width: 350px;
+}
+
+.h-logo:active {
   opacity: 0.8;
 }
 
-.h-logo {
-  height: 60px;
-}
-
-.h-logo-group,
 .h-nav-group {
   display: flex;
   justify-content: space-between;
   align-items: center;
   text-decoration: none;
   color: white;
-}
-
-.h-logo-group {
-  height: 100px;
-  width: 215px;
-}
-
-.h-nav-group {
   height: 200px;
   width: 300px;
 }
@@ -82,10 +70,8 @@
     font-size: 2.75rem;
   }
 
-  .h-logo-group {
-    height: 50px;
-    width: 268px;
-    margin-bottom: 30px
+  .h-logo img {
+    width: 200px;
   }
 
   .h-nav-group {
