@@ -1,6 +1,8 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-// import Header from '../../containers/Header'
+import Header from '../../containers/Header'
+import NoteForm from '../../containers/NoteForm'
+import NotesList from '../../containers/NotesList'
 import './App.css';
 
 export const App = () => {
@@ -11,11 +13,10 @@ export const App = () => {
       <p>Please click the the 'Take Note' or 'Notable Notes' buttons or your browser's forward and back buttons to navigate to your desired destination. The Nordstrom Notes logo will return you to the Take Note page.</p>
     </div>
   )
+
   return (
     <div className="App">
-      <header className="App-header">
-        Nordstrom Notes Header
-      </header>
+      <Header />
       <Switch>
         <Route
           exact path='/'
