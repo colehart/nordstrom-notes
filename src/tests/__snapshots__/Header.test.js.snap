@@ -3,5 +3,41 @@
 exports[`Header matches the snapshot 1`] = `
 <header
   className="Header"
-/>
+>
+  <Link
+    aria-label="Return to the Take Note Form"
+    className="h-logo"
+    replace={false}
+    to="/"
+  >
+    <img
+      alt="The Nordstrom Notes logo"
+      src="nordstrom-notes-logo.png"
+    />
+  </Link>
+  <nav
+    className="h-nav-group"
+  >
+    <NavLink
+      activeClassName="active"
+      aria-current="page"
+      aria-label="Click to return to the Take Note form"
+      className="h-take-note btn"
+      exact={true}
+      to="/"
+    >
+      Take Note
+    </NavLink>
+    <NavLink
+      activeClassName="active"
+      aria-current="page"
+      aria-label="Click to view your notable notes"
+      className="h-notable-notes btn"
+      exact={true}
+      to="/notes"
+    >
+      Notable Notes
+    </NavLink>
+  </nav>
+</header>
 `;

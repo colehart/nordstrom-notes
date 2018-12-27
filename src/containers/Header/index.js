@@ -40,7 +40,6 @@ export const Header = () => {
           aria-label='Click to view your notable notes'
         >
           Notable Notes
-          {/* <span className='h-badge'>{checkSaved() || 0}</span> */}
         </NavLink>
       </nav>
     </header>

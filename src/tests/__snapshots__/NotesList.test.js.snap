@@ -3,5 +3,7 @@
 exports[`NotesList matches the snapshot 1`] = `
 <div
   className="NotesList"
-/>
+>
+  NotesList
+</div>
 `;

@@ -11,28 +11,29 @@
 }
 
 .btn {
-  width: 150px;
-  height: 32.5px;
+  height: 37px;
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 3px;
   text-decoration: none;
   font-size: 1.15rem;
-  color: var(--charcoal);
+  color: black;
+  transition: 0.2s;
 }
 
-.btn:hover,
-.btn:focus,
-.active {
-  border-bottom: var(--medium-gray);
+.btn:hover {
+  border-bottom-color: var(--medium-gray);
 }
 
 .btn:active {
-  background-color: #498D93;
+  border-bottom-color: var(--gray);
 }
 
 .h-logo img {
   width: 350px;
+  transition: 0.2s;
 }
 
 .h-logo:active {
@@ -58,22 +59,45 @@
   background-color: var(--coral);
 }
 
-@media screen and (max-width: 655px) {
+@media screen and (max-width: 890px) {
   .Header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
 
-  .Header h1 {
-    font-size: 2.75rem;
-  }
-
   .h-logo img {
-    width: 200px;
+    width: 300px;
   }
 
   .h-nav-group {
     height: 50px;
+    width: 250px;
+  }
+
+  .btn {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .Header {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 60px 0;
+  }
+
+  .h-logo img {
+    width: 230px;
+  }
+
+  .h-nav-group {
+    height: 50px;
+    width: 225px;
+  }
+
+  .btn {
+    font-size: 1rem;
   }
 }

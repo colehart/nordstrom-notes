@@ -3,5 +3,7 @@
 exports[`NoteForm matches the snapshot 1`] = `
 <section
   className="NoteForm"
-/>
+>
+  NoteForm
+</section>
 `;
