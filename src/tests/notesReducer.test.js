@@ -1,6 +1,6 @@
 import { isLoading, caughtError, addNote } from '../reducers/notesReducer';
 import * as Actions from '../actions';
-import { mockErrorMessage, mockTag, mockText } from './testMocks'
+import { mockErrorMessage, mockTag, mockText, mockNote } from './testMocks'
 
 describe('storiesReducer', () => {
   describe('isLoading', () => {
@@ -43,6 +43,14 @@ describe('storiesReducer', () => {
       const result = addNote(undefined, {})
 
       expect(result).toEqual(expected)
+    })
+
+    it('should return the state with notes', () => {
+      const initialState = []
+      const expected = [mockNote];
+
+      const result = addNote(initialState, Actions.addNote(mockTag, mockText))
+      expect(result).toEqual(expected);
     })
   })
 })
