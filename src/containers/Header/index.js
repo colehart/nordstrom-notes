@@ -5,17 +5,12 @@ import { PropTypes } from 'prop-types';
 import nordIcon from '../../assets/images/nordstrom-notes-logo.png'
 import './Header.css';
 
-export const Header = () => {
+export const Header = ({ caughtError }) => {
   return (
     <header className='Header'>
-      {/*
-      <div
-        className={ caughtError ? 'h-error' : 'hidden'}
-      >
+      <div className={ caughtError ? 'h-error' : 'hidden'}>
         { caughtError }
       </div>
-      */}
-
       <Link
         to='/'
         className='h-logo'
@@ -45,3 +40,13 @@ export const Header = () => {
     </header>
   )
 }
+
+export const mapStateToProps = (state) => ({
+  caughtError: state.caughtError
+})
+
+Header.propTypes = {
+  caughtError: PropTypes.string
+}
+
+export default connect(mapStateToProps)(Header)

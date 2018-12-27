@@ -4,7 +4,7 @@ exports[`App matches the snapshot 1`] = `
 <div
   className="App"
 >
-  <Header />
+  <Connect(Header) />
   <Switch>
     <Route
       component={[Function]}
