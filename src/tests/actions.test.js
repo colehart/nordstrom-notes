@@ -21,13 +21,13 @@ describe('actions', () => {
 
     expect(result).toEqual(expectedAction);
   })
-  it('should have a type of ADD_NOTE', () => {
+  it('should have a type of ADD_NOTES', () => {
     const expectedAction = {
-      type: 'ADD_NOTE',
+      type: 'ADD_NOTES',
       tag: mockTag,
       text: mockText
     }
-    const result = Actions.addNote(mockTag, mockText)
+    const result = Actions.addNotes(mockTag, mockText)
 
     expect(result).toEqual(expectedAction);
   })
