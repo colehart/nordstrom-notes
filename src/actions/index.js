@@ -8,8 +8,8 @@ export const caughtError = (errorMessage) => ({
   errorMessage,
 })
 
-export const addNote = (tag, text) => ({
-  type: 'ADD_NOTE',
+export const addNotes = (tag, text) => ({
+  type: 'ADD_NOTES',
   tag,
   text,
 })

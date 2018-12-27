@@ -16,9 +16,9 @@ export const caughtError = (state = '', action) => {
   }
 }
 
-export const addNote = (state = [], action) => {
+export const addNotes = (state = [], action) => {
   switch(action.type) {
-    case 'ADD_NOTE':
+    case 'ADD_NOTES':
       return [...state, {tag: action.tag, text: action.text}]
     default:
       return state
