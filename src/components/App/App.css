@@ -1,0 +1,32 @@
+.App {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 160px 1fr;
+}
+
+.a-404 {
+  width: 75%;
+  margin: 0 auto;
+  grid-row: 2 / 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 0;
+  max-width: 550px;
+}
+
+.a-404 h2 {
+  text-align: center;
+}
+
+.a-404 p {
+  font-size: 1.15rem;
+}
+
+@media screen and (max-width: 655px) {
+  .App {
+    grid-template-rows: 225px 1fr;
+  }
+}

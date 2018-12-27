@@ -4,6 +4,7 @@ import './NoteForm.css';
 export const NoteForm = () => {
   return (
     <section className='NoteForm'>
+      NoteForm
     </section>
   )
 }

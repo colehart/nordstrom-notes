@@ -4,6 +4,7 @@ import './NotesList.css';
 export const NotesList = () => {
   return (
     <div className='NotesList'>
+      NotesList
     </div>
   )
 }

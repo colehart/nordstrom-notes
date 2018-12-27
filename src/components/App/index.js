@@ -9,9 +9,10 @@ import './App.css';
 export const App = () => {
   const noMatch = ({ location }) => (
     <div className='a-404'>
-      <h2>404 - Path not found.</h2>
-      <p>No routes match {location.pathname}.</p>
-      <p>Please click the the 'Take Note' or 'Notable Notes' buttons or your browser's forward and back buttons to navigate to your desired destination. The Nordstrom Notes logo will return you to the Take Note page.</p>
+      <h2>404 &ndash; Path not found.</h2>
+      <p>No routes match <code>{location.pathname}</code>.</p>
+      <p>Please click the the 'Take Note' or 'Notable Notes' buttons or your browser's forward and back buttons to navigate to your desired destination.</p>
+      <p>The Nordstrom Notes logo will return you to the Take Note page.</p>
     </div>
   )
 

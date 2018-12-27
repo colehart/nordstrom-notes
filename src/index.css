@@ -1,6 +1,34 @@
+:root {
+  --lt-gray: #E3E3E3;
+  --gray: #BBB;
+  --medium-gray: #737373;
+  --charcoal: #393939;
+  --nord-red: #8D1A11;
+  --go-green: #507A21;
+  --lt-green: #F7FAF3;
+  --alert-red: #BB3D38;
+  --lt-red: #FBF4F4;
+  --link-blue: #4F5A98;
+  --lt-blue: #F6F7FE;
+}
+
 body {
   margin: 0;
   padding: 0;
   font-weight: 400;
   font-family: 'Josefin Sans', sans-serif;
+  color: var(--charcoal);
+  letter-spacing: 0.2px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 600;
+  color: black;
+}
+
+p {
+  line-height: 1.45;
 }
