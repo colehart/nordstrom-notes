@@ -7,7 +7,7 @@ exports[`App matches the snapshot 1`] = `
   <header
     className="App-header"
   >
-    Nordstrom Notes
+    Nordstrom Notes Header
   </header>
 </div>
 `;
