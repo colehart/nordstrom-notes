@@ -1,8 +1,9 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import Header from '../../containers/Header'
-import NoteForm from '../../containers/NoteForm'
-import NotesList from '../../containers/NotesList'
+// will have to change import style for containers once connected to store
+import { Header } from '../../containers/Header'
+import { NoteForm } from '../../containers/NoteForm'
+import { NotesList } from '../../containers/NotesList'
 import './App.css';
 
 export const App = () => {
