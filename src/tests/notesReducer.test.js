@@ -19,4 +19,21 @@ describe('storiesReducer', () => {
       expect(result).toEqual(expected);
     })
   })
+
+  describe('caughtError', () => {
+    it('should return the default state', () => {
+      const expected = ''
+      const result = caughtError(undefined, {})
+
+      expect(result).toEqual(expected)
+    })
+
+    it('should return the state with caught error message', () => {
+      const initialState = ''
+      const expected = mockErrorMessage;
+
+      const result = caughtError(initialState, Actions.caughtError(mockErrorMessage))
+      expect(result).toEqual(expected);
+    })
+  })
 })
