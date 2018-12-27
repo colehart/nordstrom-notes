@@ -1,4 +1,4 @@
-import { isLoading, caughtError, SetStories } from '../reducers/notesReducer';
+import { isLoading, caughtError, addNote } from '../reducers/notesReducer';
 import * as Actions from '../actions';
 import { mockErrorMessage, mockTag, mockText } from './testMocks'
 
@@ -34,6 +34,15 @@ describe('storiesReducer', () => {
 
       const result = caughtError(initialState, Actions.caughtError(mockErrorMessage))
       expect(result).toEqual(expected);
+    })
+  })
+
+  describe('addNote', () => {
+    it('should return the default state', () => {
+      const expected = []
+      const result = addNote(undefined, {})
+
+      expect(result).toEqual(expected)
     })
   })
 })
