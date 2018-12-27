@@ -1,4 +1,5 @@
 import * as Actions from '../actions';
+import { mockErrorMessage, mockTag, mockText } from './testMocks'
 
 describe('actions', () => {
   it('should have a type of IS_LOADING', () => {
@@ -12,7 +13,6 @@ describe('actions', () => {
   })
 
   it('should have a type of CAUGHT_ERROR', () => {
-    const mockErrorMessage = 'Error: path not found'
     const expectedAction = {
       type: 'CAUGHT_ERROR',
       errorMessage: mockErrorMessage
@@ -22,8 +22,6 @@ describe('actions', () => {
     expect(result).toEqual(expectedAction);
   })
   it('should have a type of ADD_NOTE', () => {
-    const mockTag = 'Work'
-    const mockText = 'This is my note.'
     const expectedAction = {
       type: 'ADD_NOTE',
       tag: mockTag,
