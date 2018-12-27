@@ -37,7 +37,7 @@
 }
 
 .h-logo:active {
-  opacity: 0.8;
+  opacity: 0.7;
 }
 
 .h-nav-group {
@@ -51,12 +51,19 @@
 }
 
 .h-error {
-  height: 25px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 40px;
   width: 100%;
+  padding-top: 5px;
   display: flex;
-  justify-content: stretch;
+  justify-content: center;
   align-items: center;
-  background-color: var(--coral);
+  background-color: var(--alert-red);
+  color: var(--lt-red);
+  border-bottom: 2px solid var(--lt-red);
+  transition: 0.2s;
 }
 
 @media screen and (max-width: 890px) {
