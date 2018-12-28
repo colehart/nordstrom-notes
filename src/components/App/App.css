@@ -6,24 +6,7 @@
   grid-template-rows: 160px 1fr;
 }
 
-.a-404 {
-  width: 75%;
-  margin: 0 auto;
-  grid-row: 2 / 3;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 40px 0;
-  max-width: 555px;
-}
-
-.a-404 h2 {
-  text-align: center;
-}
-
-.a-404 p {
-  font-size: 1.15rem;
-}
+/* see src/containers/Main/Main.css for 404 styling */
 
 @media screen and (max-width: 890px) {
   .App {
