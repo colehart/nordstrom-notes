@@ -3,13 +3,7 @@
   width: 100vw;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 160px 1fr;
+  grid-template-rows: 225px 1fr;
 }
 
 /* see src/containers/Main/Main.css for 404 styling */
-
-@media screen and (max-width: 890px) {
-  .App {
-    grid-template-rows: 225px 1fr;
-  }
-}
