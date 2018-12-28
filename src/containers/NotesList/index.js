@@ -15,44 +15,46 @@ export const NotesList = ({notes, caughtError}) => {
   )
 
   const notesRows = notes.map((note, index) => {
-    console.log(note)
     return (
-      <div className={`nl-row-${index}`} key={index}>
+      <div className={`nl-table-setup nl-row`} key={index}>
         <section className={`nl-row-note`}>
           {note.text}
         </section>
         <section className={`nl-row-tag`}>
           {note.tag}
         </section>
-        <section className={`nl-row-note`}>
-          {note.date || null}
+        <section className={`nl-row-date`}>
+          {note.date || 'no date'}
         </section>
       </div>
     )
   })
+
+  const noteTable = (
+    <div className='nl-table'>
+      <article className='nl-table-header nl-table-setup'>
+        <div className='nl-header-note'>
+          Note
+        </div>
+        <div className='nl-header-tag'>
+          Tag
+        </div>
+        <div className='nl-header-date'>
+          Date
+        </div>
+      </article>
+      <article className='nl-table-rows'>
+        { notesRows }
+      </article>
+    </div>
+  )
 
   return (
     <section className='NotesList'>
       <h2>Notable Notes</h2>
       <NotesFilter />
       <section className='nl-list'>
-        { !notes.length ? noNotes : '' }
-        <div className='nl-table'>
-          <article className='nl-table-header'>
-            <div className='nl-header-title'>
-              Note
-            </div>
-            <div className='nl-header-title'>
-              Tag
-            </div>
-            <div className='nl-header-title'>
-              Date Created
-            </div>
-          </article>
-          <article className='nl-table-rows'>
-            { notesRows }
-          </article>
-        </div>
+        { !notes.length ? noNotes : noteTable }
       </section>
     </section>
   )
