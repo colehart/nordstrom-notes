@@ -10,7 +10,7 @@ import './Main.css';
 export const Main = ({ isLoading, match }) => {
   return (
     <main className='Main'>
-      { isLoading ? <Loader /> : ''}
+      { isLoading ? <Loader /> : '' }
       { match.path === '/'
           ? <NoteForm />
           : <NotesList />
