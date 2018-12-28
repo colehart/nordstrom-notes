@@ -12,7 +12,7 @@ export class NoteForm extends Component {
     }
   }
 
-  handleInputChange = async event => {
+  handleTextChange = async event => {
     const { value } = event.target;
 
     await this.setState({ text: value })
@@ -44,7 +44,7 @@ export class NoteForm extends Component {
           <TextareaAutosize
             className='nf-note-text'
             value={text}
-            onChange={this.handleInputChange}
+            onChange={this.handleTextChange}
             placeholder='Write your thoughts here...'
             aria-label='Write your note here, in 250 characters or less'
             maxLength='250'
@@ -54,7 +54,7 @@ export class NoteForm extends Component {
           />
           <div className="nf-button-group">
             <div className="nf-dropdown-group">
-              <label for='nf-tags'>Tag:</label>
+              <label htmlFor='nf-tags'>Tag:</label>
               <select
                 className="nf-dropdown nf-btn"
                 id='nf-tags'

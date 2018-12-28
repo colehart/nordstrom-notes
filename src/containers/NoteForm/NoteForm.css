@@ -4,18 +4,22 @@
 }
 
 .nf-form {
-  max-height: 300px;
   width: 100%;
+  max-width: 350px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
 }
 
 .nf-note-text {
   width: 100%;
+  min-height: 150px;
   padding: 15px;
   resize: none;
   outline: none;
+  border: 2px solid var(--medium-gray);
 }
 
 .nf-note-text,
@@ -24,29 +28,45 @@
   font-size: 1rem;
 }
 
-.nf-note-text:invalid {
-  border: 2px solid var(--alert-red);
-}
-
 .nf-note-text:valid {
-  border: 2px solid var(--go-green);
+  border: 2px solid var(--gray);
 }
 
-.nf-note-text:valid,
-.nf-note-text:invalid {
-  transition: 0.3s;
+.nf-note-text,
+.nf-note-text:valid {
+  transition: 0.5s;
 }
 
 .nf-button-group {
-  height: 100px;
+  height: 115px;
+  margin-top: 40px;
+  width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
 }
 
+.nf-dropdown-group {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 45px 1fr;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.nf-dropdown-group label {
+  grid-column: 1 / 2;
+}
+
+.nf-dropdown {
+  grid-column: 2 / 3;
+}
+
 .nf-dropdown-group,
 .nf-submit {
-  width: 200px;
+  width: 100%;
 }
 
 .nf-btn {
@@ -56,11 +76,6 @@
   border-radius: 0;
   outline: none;
   line-height: 2.45;
-}
-
-.nf-dropdown {
-  margin-left: 15px;
-  width: 150px;
 }
 
 .nf-submit {
@@ -84,6 +99,10 @@
   font-weight: 600;
 }
 
+.nf-submit:active {
+  background-color: var(--lt-gray);
+}
+
 .nf-submit:disabled {
   background-color: var(--gray);
 }
@@ -93,19 +112,22 @@
 }
 
 .nf-submit,
+.nf-submit:active,
 .nf-submit:hover,
 .nf-submit:disabled {
-  transition: 0.2s;
+  transition: 0.3s;
 }
 
-@media screen and (max-width: 575px) {
-  .nf-form {
-    max-height: 1000px;
-  }
-
+@media screen and (max-width: 890px) {
+  .nf-note-text,
   .nf-button-group {
-    height: 115px;
-    margin-top: 45px;
-    flex-direction: column;
+    max-width: 292px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .nf-note-text,
+  .nf-button-group {
+    max-width: 224px;
   }
 }
