@@ -57,16 +57,16 @@
   position: absolute;
   top: 0;
   left: 0;
-  height: 40px;
+  height: 50px;
   width: 100%;
   padding-top: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--alert-red);
-  color: var(--lt-red);
-  border-bottom: 2px solid var(--lt-red);
-  transition: 0.2s;
+  background-color: var(--lt-red);
+  color: var(--alert-red);
+  line-height: 1.25;
+  border-bottom: 1px solid var(--alert-red);
 }
 
 @media screen and (max-width: 500px) {

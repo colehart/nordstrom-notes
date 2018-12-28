@@ -11,7 +11,8 @@ export class NoteForm extends Component {
     this.state = {
       tag: 'Work',
       text: '',
-      isDisabled: true
+      isDisabled: true,
+      wasSuccessful: false,
     }
   }
 
@@ -35,18 +36,35 @@ export class NoteForm extends Component {
     const { tag, text } = this.state
 
     try {
+      const successState = {
+        tag: 'Work',
+        text: '',
+        isDisabled: true,
+        wasSuccessful: true,
+      }
+
       this.props.addNotes(tag, text)
+      await this.setState(successState)
+      this.resetBanner()
     }
     catch(error) {
       this.props.caughtError(error.message)
     }
   }
 
+  resetBanner = () => {
+    console.log('reset banner')
+    setTimeout(() => this.setState({ wasSuccessful: false }), 4000)
+  }
+
   render() {
-    const { text, isDisabled } = this.state
+    const { text, isDisabled, wasSuccessful } = this.state
 
     return (
       <section className='NoteForm'>
+        <div className={ wasSuccessful ? 'nf-success' : 'hidden' }>
+          Note successfully added!
+        </div>
         <h2>Take Note</h2>
         <form
           className='nf-form'
