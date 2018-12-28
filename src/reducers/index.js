@@ -1,10 +1,11 @@
 import { combineReducers } from 'redux'
-import { isLoading, caughtError, addNotes } from './notesReducer'
+import { isLoading, caughtError, addNotes, newNoteCount } from './notesReducer'
 
 const rootReducer = combineReducers({
   isLoading,
   caughtError,
-  notes: addNotes
+  notes: addNotes,
+  newNoteCount,
 })
 
 export default rootReducer;
