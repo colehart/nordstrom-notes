@@ -14,8 +14,17 @@ export class NoteForm extends Component {
 
   handleInputChange = async event => {
     const { value } = event.target;
+
     await this.setState({ text: value })
-    await this.toggleSubmit();
+    this.toggleSubmit();
+  }
+
+  toggleSubmit = async () => {
+    const { text } = this.state
+
+    text
+      ? await this.setState({ isDisabled: false })
+      : await this.setState({ isDisabled: true })
   }
 
   handleSubmit = async event => {
