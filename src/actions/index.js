@@ -14,6 +14,7 @@ export const addNotes = (tag, text) => ({
   text,
 })
 
-export const newNoteCount = () => ({
-  type: 'NEW_NOTE_COUNT'
+export const newNoteAdded = bool => ({
+  type: 'NEW_NOTE_ADDED',
+  newNoteAdded: bool,
 })

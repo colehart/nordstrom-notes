@@ -7,7 +7,9 @@ export class NotesList extends Component {
   constructor () {
     super()
     this.state = {
-      notes: []
+      notes: [],
+      filter: '',
+      oldNoteCount: 0
     }
   }
 
@@ -24,14 +26,26 @@ export class NotesList extends Component {
       <section className='NotesList'>
         <h2>Notable Notes</h2>
         <form className='nl-filter-group'>
-          <radiogroup
+          <div
             className="nl-dropdown-group"
             name='filter-type'
             onChange={this.handleInputChange}
           >
-            <radio id='date' lable='Date' />
-            <radio id='tag' lable='Tag' />
-          </radiogroup>
+            <input
+              type='radio'
+              name='filter'
+              id='date'
+              lable='Date'
+              onChange={this.setFilter}
+            />
+            <input
+              type='radio'
+              name='filter'
+              id='tag'
+              lable='Tag'
+              onChange={this.setFilter}
+            />
+          </div>
           <input
             className="nl-filter-params"
             name="filter-params"
