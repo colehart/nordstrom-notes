@@ -27,7 +27,7 @@ export const Header = ({ caughtError }) => {
           className="h-take-note btn"
           aria-label='Click to return to the Take Note form'
         >
-          Take Note
+          Make Note
         </NavLink>
         <NavLink
           exact to='/notes'

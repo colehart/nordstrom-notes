@@ -1,0 +1,78 @@
+.NotesList {
+  height: 100%;
+  width: 100%;
+}
+
+.nl-no-notes h3 {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 1.25rem;
+}
+
+.nl-table {
+  height: 100%;
+  width: 100%;
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 40px 1fr;
+}
+
+.nl-table-header {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  background-color: var(--charcoal);
+  color: white;
+
+}
+
+.nl-table-rows {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+.nl-table-setup {
+  height: 100%;
+  width: 100%;
+  max-width: 350px;
+  display: grid;
+  grid-template-columns: 40% repeat(2, 1fr);
+  align-items: center;
+  justify-items: center;
+  border: 1px solid var(--charcoal);
+  border-top: 0;
+}
+
+.nl-row {
+  padding: 15px;
+}
+
+.nl-row:nth-child(even) {
+  background-color: var(--lt-gray);
+}
+
+.nl-header-note,
+.nl-row-note {
+  grid-column: 1 / 2;
+}
+
+.nl-header-tag,
+.nl-row-tag {
+  grid-column: 2 / 3;
+}
+
+.nl-header-date,
+.nl-row-date {
+  grid-column: 3 / 4;
+}
+
+.nl-header-date {
+  padding-right: 15px;
+}
+
+.nl-row-note {
+  justify-self: start;
+  width: 100%;
+  overflow-wrap: break-word;
+  line-height: 2;
+}

@@ -1,9 +1,84 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`NotesList matches the snapshot 1`] = `
-<div
+<section
   className="NotesList"
 >
-  NotesList
-</div>
+  <h2>
+    Notable Notes
+  </h2>
+  <form
+    className="nl-form"
+  >
+    <div
+      className="nl-filter-by"
+    >
+      <label
+        htmlFor="filter-group"
+      >
+        Filter by:
+      </label>
+      <div
+        className="nl-filter-group"
+        id="filter-group"
+        name="filter-type"
+      >
+        <div
+          className="nl-filter-type"
+        >
+          <input
+            id="date"
+            name="filter"
+            onChange={[Function]}
+            type="radio"
+            value="date"
+          />
+          <label
+            htmlFor="date"
+          >
+            Date
+          </label>
+        </div>
+        <div
+          className="nl-filter-type"
+        >
+          <input
+            id="tag"
+            name="filter"
+            onChange={[Function]}
+            type="radio"
+            value="tag"
+          />
+          <label
+            htmlFor="tag"
+          >
+            Tag
+          </label>
+        </div>
+      </div>
+    </div>
+    <div
+      className="nl-filter-params-group"
+    >
+      <label
+        htmlFor="filter-params"
+      >
+        Search:
+      </label>
+      <input
+        className="nl-filter-params"
+        disabled={true}
+        id="filter-params"
+        maxLength="8"
+        name="filterParams"
+        onChange={[Function]}
+        placeholder="Choose a filter."
+        value=""
+      />
+    </div>
+  </form>
+  <section
+    className="nl-list"
+  />
+</section>
 `;
