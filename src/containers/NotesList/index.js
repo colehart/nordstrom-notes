@@ -9,7 +9,9 @@ export class NotesList extends Component {
     this.state = {
       notes: [],
       filter: '',
-      oldNoteCount: 0
+      filterParams: '',
+      isDisabled: true,
+      placeholderText: 'Choose a filter.',
     }
   }
 
@@ -17,39 +19,77 @@ export class NotesList extends Component {
     const { name, value } = event.target;
 
     await this.setState({ [name]: value })
+    if (name === 'filter') this.toggleParams()
+  }
+
+  toggleParams = async () => {
+    const { filter } = this.state
+
+    filter
+      ? await this.setState({ isDisabled: false })
+      : await this.setState({ isDisabled: true })
+
+    this.formatPlaceholder(filter)
+  }
+
+  formatPlaceholder = async filter => {
+    const dateState = { placeholderText: 'Ex: 12-18-2018' }
+    const tagState = { placeholderText: 'Ex: Work' }
+
+    filter === 'date'
+      ? await this.setState(dateState)
+      : await this.setState(tagState)
   }
 
   render() {
-    const { notes } = this.state;
+    const { notes, filter, filterParams, isDisabled, placeholderText } = this.state;
 
     return (
       <section className='NotesList'>
         <h2>Notable Notes</h2>
-        <form className='nl-filter-group'>
-          <div
-            className="nl-dropdown-group"
-            name='filter-type'
-            onChange={this.handleInputChange}
-          >
+        <form className='nl-form'>
+          <div className='nl-filter-by'>
+            <label htmlFor='filter-group'>Filter by:</label>
+            <div
+              className="nl-filter-group"
+              id='filter-group'
+              name='filter-type'
+            >
+              <div className='nl-filter-type'>
+                <input
+                  type='radio'
+                  name='filter'
+                  value='date'
+                  id='date'
+                  onChange={this.handleInputChange}
+                />
+                <label htmlFor="date">Date</label>
+              </div>
+              <div className='nl-filter-type'>
+                <input
+                  type='radio'
+                  name='filter'
+                  value='tag'
+                  id='tag'
+                  onChange={this.handleInputChange}
+                />
+                <label htmlFor='tag'>Tag</label>
+              </div>
+            </div>
+          </div>
+          <div className='nl-filter-params-group'>
+            <label htmlFor='filter-params'>Search:</label>
             <input
-              type='radio'
-              name='filter'
-              id='date'
-              lable='Date'
-              onChange={this.setFilter}
-            />
-            <input
-              type='radio'
-              name='filter'
-              id='tag'
-              lable='Tag'
-              onChange={this.setFilter}
+              className='nl-filter-params'
+              id='filter-params'
+              name='filterParams'
+              value={filterParams}
+              maxLength={ filter === 'date' ? '10' : '8' }
+              onChange={this.handleInputChange}
+              disabled={isDisabled}
+              placeholder={placeholderText}
             />
           </div>
-          <input
-            className="nl-filter-params"
-            name="filter-params"
-          />
         </form>
         <section className='nl-list'>
           { /* add table here */ }
