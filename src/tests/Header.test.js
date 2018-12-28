@@ -2,21 +2,24 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { Header, mapStateToProps } from '../containers/Header';
 import { mockDefaultState, mockFullState } from './testMocks';
+
 describe('Header', () => {
-  let wrapper;
+  describe('Header Component', () => {
+    let wrapper;
 
-  beforeEach(() => {
-    wrapper = shallow(<Header />)
-  })
+    beforeEach(() => {
+      wrapper = shallow(<Header />)
+    })
 
-  it('matches the snapshot', () => {
-    expect(wrapper).toMatchSnapshot();
-  })
+    it('matches the snapshot', () => {
+      expect(wrapper).toMatchSnapshot();
+    })
 
-  it('matches error snapshot', () => {
-    wrapper = shallow(<Header caughtError={'There is an error'}/>)
+    it('matches error snapshot', () => {
+      wrapper = shallow(<Header caughtError={'There is an error'}/>)
 
-    expect(wrapper).toMatchSnapshot();
+      expect(wrapper).toMatchSnapshot();
+    })
   })
 
   describe('matchStateToProps', () => {

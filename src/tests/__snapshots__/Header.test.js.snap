@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Header matches error snapshot 1`] = `
+exports[`Header Header Component matches error snapshot 1`] = `
 <header
   className="Header"
 >
@@ -47,7 +47,7 @@ exports[`Header matches error snapshot 1`] = `
 </header>
 `;
 
-exports[`Header matches the snapshot 1`] = `
+exports[`Header Header Component matches the snapshot 1`] = `
 <header
   className="Header"
 >
