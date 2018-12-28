@@ -13,7 +13,13 @@ export class NoteForm extends Component {
       text: '',
       isDisabled: true,
       wasSuccessful: false,
+      timoutId: null,
     }
+  }
+
+  componentWillUnmount() {
+    const { timeoutId } = this.state
+    clearTimeout(timeoutId);
   }
 
   handleInputChange = async event => {
@@ -53,8 +59,9 @@ export class NoteForm extends Component {
     }
   }
 
-  resetBanner = () => {
-    setTimeout(() => this.setState({ wasSuccessful: false }), 2000)
+  resetBanner = async () => {
+    const id = setTimeout(() => this.setState({ wasSuccessful: false }), 1000)
+    await this.setState({ timeoutId: id })
   }
 
   render() {
@@ -114,7 +121,7 @@ export class NoteForm extends Component {
 export const mapDispatchToProps = (dispatch) => ({
   addNotes: (tag, text) => dispatch(addNotes(tag, text)),
   caughtError: (errorMessage) => dispatch(caughtError(errorMessage)),
-  newNoteAdded: bool => dispatch(newNoteAdded(bool))
+  newNoteAdded: (bool) => dispatch(newNoteAdded(bool))
 })
 
 NoteForm.propTypes = {
