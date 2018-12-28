@@ -1,0 +1,66 @@
+.NotesList {
+  height: 100%;
+  width: 100%;
+}
+
+.nl-form {
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nl-filter-by {
+  width: 70%;
+  min-width: 211px;
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  grid-template-rows: 1fr;
+  align-items: center;
+}
+
+.nl-filter-group {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.nl-filter-type {
+  justify-self: center;
+  align-self: center;
+}
+
+.nl-filter-type label {
+  margin-left: 5px;
+}
+
+.nl-filter-params-group {
+  width: 70%;
+  margin: 15px;
+  display: grid;
+  grid-template-columns: 80px 1fr;
+}
+
+.nl-filter-params-group label {
+  align-self: center;
+}
+
+.nl-filter-params {
+  grid-column: 2 / 3;
+  padding: 5px;
+  margin-left: 10px;
+  resize: none;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid var(--medium-gray);
+}
+
+.nl-filter-params,
+.nl-filter-params::placeholder {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1rem;
+}
