@@ -1,0 +1,111 @@
+.NoteForm {
+  height: 100%;
+  width: 100%;
+}
+
+.nf-form {
+  max-height: 300px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.nf-note-text {
+  width: 100%;
+  padding: 15px;
+  resize: none;
+  outline: none;
+}
+
+.nf-note-text,
+.nf-note-text::placeholder {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1rem;
+}
+
+.nf-note-text:invalid {
+  border: 2px solid var(--alert-red);
+}
+
+.nf-note-text:valid {
+  border: 2px solid var(--go-green);
+}
+
+.nf-note-text:valid,
+.nf-note-text:invalid {
+  transition: 0.3s;
+}
+
+.nf-button-group {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nf-dropdown-group,
+.nf-submit {
+  width: 200px;
+}
+
+.nf-btn {
+  height: 40px;
+  font-size: 1rem;
+  font-family: 'Josefin Sans', sans-serif;
+  border-radius: 0;
+  outline: none;
+  line-height: 2.45;
+}
+
+.nf-dropdown {
+  margin-left: 15px;
+  width: 150px;
+}
+
+.nf-submit {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nf-submit,
+.nf-submit:disabled,
+.nf-submit:disabled:hover {
+  color: white;
+  border: 2px solid transparent;
+}
+
+.nf-submit:hover {
+  background-color: white;
+  border: 2px solid black;
+  color: black;
+  font-weight: 600;
+}
+
+.nf-submit:disabled {
+  background-color: var(--gray);
+}
+
+.nf-submit:disabled:hover {
+  font-weight: 400;
+}
+
+.nf-submit,
+.nf-submit:hover,
+.nf-submit:disabled {
+  transition: 0.2s;
+}
+
+@media screen and (max-width: 575px) {
+  .nf-form {
+    max-height: 1000px;
+  }
+
+  .nf-button-group {
+    height: 115px;
+    margin-top: 45px;
+    flex-direction: column;
+  }
+}

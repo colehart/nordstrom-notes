@@ -3,13 +3,15 @@ import { shallow } from 'enzyme';
 import { NoteForm } from '../containers/NoteForm';
 
 describe('NoteForm', () => {
-  let wrapper;
+  describe('NoteForm Component', () => {
+    let wrapper;
 
-  beforeEach(() => {
-    wrapper = shallow(<NoteForm />)
-  })
+    beforeEach(() => {
+      wrapper = shallow(<NoteForm />)
+    })
 
-  it('matches the snapshot', () => {
-    expect(wrapper).toMatchSnapshot();
+    it('matches the snapshot', () => {
+      expect(wrapper).toMatchSnapshot();
+    })
   })
 })
