@@ -1,9 +1,9 @@
-export const isLoading = (bool) => ({
+export const isLoading = bool => ({
   type: 'IS_LOADING',
   isLoading: bool,
 })
 
-export const caughtError = (errorMessage) => ({
+export const caughtError = errorMessage => ({
   type: 'CAUGHT_ERROR',
   errorMessage,
 })
