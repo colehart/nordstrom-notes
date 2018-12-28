@@ -1,0 +1,18 @@
+main {
+  width: 75%;
+  margin: 0 auto;
+  grid-row: 2 / 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 0;
+  max-width: 555px;
+}
+
+main h2 {
+  text-align: center;
+}
+
+main p {
+  font-size: 1.15rem;
+}
