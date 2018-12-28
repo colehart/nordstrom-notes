@@ -53,7 +53,6 @@ export class NoteForm extends Component {
   }
 
   resetBanner = () => {
-    console.log('reset banner')
     setTimeout(() => this.setState({ wasSuccessful: false }), 4000)
   }
 
