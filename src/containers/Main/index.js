@@ -4,7 +4,7 @@ import { withRouter } from 'react-router-dom';
 import { PropTypes } from 'prop-types';
 import { Loader } from '../../components/Loader';
 import NoteForm from '../../containers/NoteForm';
-import { NotesList } from '../../containers/NotesList';
+import NotesList from '../../containers/NotesList';
 import './Main.css';
 
 export const Main = ({ isLoading, match }) => {
