@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Main Main component should match the snapshot for Loader 1`] = `
+<main
+  className="Main"
+>
+  <Loader />
+  <NotesList />
+</main>
+`;
+
+exports[`Main Main component should match the snapshot for NoteForm 1`] = `
+<main
+  className="Main"
+>
+  <NoteForm />
+</main>
+`;
+
+exports[`Main Main component should match the snapshot for NotesList 1`] = `
+<main
+  className="Main"
+>
+  <NotesList />
+</main>
+`;

@@ -22,11 +22,11 @@ export const App = () => {
       <Switch>
         <Route
           exact path='/'
-          component={ NoteForm }
+          component={ Main }
         />
         <Route
           exact path='/notes'
-          component={ NotesList }
+          component={ Main }
         />
         <Route
           component={ noMatch }

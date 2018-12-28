@@ -15,3 +15,9 @@ export const mockFullState = {
   caughtError: mockErrorMessage,
   notes: [mockNote]
 }
+export const mockMatchForm = {
+  path: '/'
+}
+export const mockMatchList = {
+  path: '/notes'
+}
