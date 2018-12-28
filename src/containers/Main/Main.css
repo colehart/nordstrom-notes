@@ -12,8 +12,19 @@ main {
 
 main h2 {
   text-align: center;
+  margin-bottom: 50px;
 }
 
 main p {
   font-size: 1.15rem;
+}
+
+@media screen and (max-width: 890px) {
+  main {
+    padding-bottom: 80px;
+  }
+
+  main h2 {
+    margin-block-start: 0;
+  }
 }

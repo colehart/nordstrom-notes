@@ -36,3 +36,8 @@ h4 {
 p {
   line-height: 1.45;
 }
+
+textarea {
+  line-height: 2;
+  letter-spacing: 0.2px;
+}
