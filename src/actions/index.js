@@ -13,3 +13,7 @@ export const addNotes = (tag, text) => ({
   tag,
   text,
 })
+
+export const newNoteCount = () => ({
+  type: 'NEW_NOTE_COUNT'
+})

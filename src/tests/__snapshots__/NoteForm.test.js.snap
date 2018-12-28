@@ -4,8 +4,13 @@ exports[`NoteForm NoteForm Component matches the snapshot 1`] = `
 <section
   className="NoteForm"
 >
+  <div
+    className="hidden"
+  >
+    Note successfully added!
+  </div>
   <h2>
-    Take Note
+    Make Note
   </h2>
   <form
     className="nf-form"
@@ -16,6 +21,7 @@ exports[`NoteForm NoteForm Component matches the snapshot 1`] = `
       async={false}
       className="nf-note-text"
       maxLength="250"
+      name="text"
       onChange={[Function]}
       onResize={[Function]}
       placeholder="Write your thoughts here..."
@@ -31,26 +37,28 @@ exports[`NoteForm NoteForm Component matches the snapshot 1`] = `
         className="nf-dropdown-group"
       >
         <label
-          for="nf-tags"
+          htmlFor="nf-tags"
         >
           Tag:
         </label>
         <select
           className="nf-dropdown nf-btn"
           id="nf-tags"
+          name="tag"
+          onChange={[Function]}
         >
           <option
-            value="work"
+            value="Work"
           >
             Work
           </option>
           <option
-            value="personal"
+            value="Personal"
           >
             Personal
           </option>
           <option
-            value="hobby"
+            value="Hobby"
           >
             Hobby
           </option>

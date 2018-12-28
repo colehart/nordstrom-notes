@@ -13,7 +13,7 @@ exports[`Main Main component should match the snapshot for NoteForm 1`] = `
 <main
   className="Main"
 >
-  <NoteForm />
+  <Connect(NoteForm) />
 </main>
 `;
 

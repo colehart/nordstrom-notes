@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import TextareaAutosize from 'react-autosize-textarea';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { addNotes, caughtError } from '../../actions';
+import { addNotes, caughtError, newNoteCount } from '../../actions';
 import './NoteForm.css';
 
 export class NoteForm extends Component {
@@ -43,7 +43,8 @@ export class NoteForm extends Component {
         wasSuccessful: true,
       }
 
-      this.props.addNotes(tag, text)
+      await this.props.addNotes(tag, text)
+      await this.props.newNoteCount()
       await this.setState(successState)
       this.resetBanner()
     }
@@ -53,7 +54,7 @@ export class NoteForm extends Component {
   }
 
   resetBanner = () => {
-    setTimeout(() => this.setState({ wasSuccessful: false }), 4000)
+    setTimeout(() => this.setState({ wasSuccessful: false }), 2000)
   }
 
   render() {
@@ -64,7 +65,7 @@ export class NoteForm extends Component {
         <div className={ wasSuccessful ? 'nf-success' : 'hidden' }>
           Note successfully added!
         </div>
-        <h2>Take Note</h2>
+        <h2>Make Note</h2>
         <form
           className='nf-form'
           onSubmit={this.handleSubmit}
@@ -113,11 +114,13 @@ export class NoteForm extends Component {
 export const mapDispatchToProps = (dispatch) => ({
   addNotes: (tag, text) => dispatch(addNotes(tag, text)),
   caughtError: (errorMessage) => dispatch(caughtError(errorMessage)),
+  newNoteCount: () => dispatch(newNoteCount())
 })
 
 NoteForm.propTypes = {
   addNotes: PropTypes.func,
   caughtError: PropTypes.func,
+  newNoteCount: PropTypes.func,
 }
 
 export default connect(null, mapDispatchToProps)(NoteForm)

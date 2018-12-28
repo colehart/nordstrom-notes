@@ -31,7 +31,7 @@ exports[`Header Header Component matches error snapshot 1`] = `
       exact={true}
       to="/"
     >
-      Take Note
+      Make Note
     </NavLink>
     <NavLink
       activeClassName="active"
@@ -76,7 +76,7 @@ exports[`Header Header Component matches the snapshot 1`] = `
       exact={true}
       to="/"
     >
-      Take Note
+      Make Note
     </NavLink>
     <NavLink
       activeClassName="active"
