@@ -6,17 +6,17 @@ export class NoteForm extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      tag: '',
+      tag: 'Work',
       text: '',
       isDisabled: true
     }
   }
 
-  handleTextChange = async event => {
-    const { value } = event.target;
+  handleInputChange = async event => {
+    const { name, value } = event.target;
 
-    await this.setState({ text: value })
-    this.toggleSubmit();
+    await this.setState({ [name]: value })
+    if (name === 'text') this.toggleSubmit();
   }
 
   toggleSubmit = async () => {
@@ -32,7 +32,7 @@ export class NoteForm extends Component {
   }
 
   render() {
-    const { tag, text, isDisabled } = this.state
+    const { text, isDisabled } = this.state
 
     return (
       <section className='NoteForm'>
@@ -43,8 +43,9 @@ export class NoteForm extends Component {
         >
           <TextareaAutosize
             className='nf-note-text'
+            name='text'
             value={text}
-            onChange={this.handleTextChange}
+            onChange={this.handleInputChange}
             placeholder='Write your thoughts here...'
             aria-label='Write your note here, in 250 characters or less'
             maxLength='250'
@@ -57,11 +58,13 @@ export class NoteForm extends Component {
               <label htmlFor='nf-tags'>Tag:</label>
               <select
                 className="nf-dropdown nf-btn"
+                name='tag'
+                onChange={this.handleInputChange}
                 id='nf-tags'
               >
-                <option value='work'>Work</option>
-                <option value='personal'>Personal</option>
-                <option value='hobby'>Hobby</option>
+                <option value='Work'>Work</option>
+                <option value='Personal'>Personal</option>
+                <option value='Hobby'>Hobby</option>
               </select>
             </div>
             <button
