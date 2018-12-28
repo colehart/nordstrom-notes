@@ -12,6 +12,10 @@
   --lt-blue: #F6F7FE;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
