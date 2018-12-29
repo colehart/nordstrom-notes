@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
+import moment from 'moment';
 import { caughtError } from '../../actions';
 import NotesFilter from '../NotesFilter';
 import './NotesList.css';
@@ -15,6 +16,7 @@ export const NotesList = ({notes, caughtError}) => {
   )
 
   const notesRows = notes.map((note, index) => {
+
     return (
       <div className={`nl-table-setup nl-row`} key={index}>
         <section className={`nl-row-note`}>

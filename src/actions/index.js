@@ -8,10 +8,11 @@ export const caughtError = errorMessage => ({
   errorMessage,
 })
 
-export const addNotes = (tag, text) => ({
+export const addNotes = (tag, text, date) => ({
   type: 'ADD_NOTES',
   tag,
   text,
+  date,
 })
 
 export const newNoteAdded = bool => ({
