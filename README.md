@@ -14,7 +14,20 @@
 * `npm start`
 
 ## See it live
-![A screen recording of the app](https://github.com/colehart/nordstrom-notes/blob/master/src/assets/images/screenRecording.gif "App Screen Recording")
+### Site Navigation
+The app opens on the Make Note page. You can return here via either the Nordstrom notes logo or the Make Note link. To view notes, click on the Notable Notes link. If you manually attempt to navigate to a different page using the nav bar, the app will return a 404 page.
+
+![A screen recording of the app](https://github.com/colehart/nordstrom-notes/blob/master/src/assets/images/nn-site-nav.gif "App Screen Recording")
+
+### Making a Note
+Notes have a 250 character limit. Choose a tag to keep your notes organized. The default tag is 'Work'.
+
+![A screen recording of the app](https://github.com/colehart/nordstrom-notes/blob/master/src/assets/images/nn-make-note.gif "App Screen Recording")
+
+### Viewing Your Notes
+Navigate to the Notable Notes page to view all of your notes in a convenient table. Use the filter to find notes by date or by tag.
+
+![A screen recording of the app](https://github.com/colehart/nordstrom-notes/blob/master/src/assets/images/nn-view-notes.gif "App Screen Recording")
 
 ## Technologies Used
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
