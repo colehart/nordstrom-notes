@@ -2,8 +2,10 @@ import React, { Component } from 'react';
 import TextareaAutosize from 'react-autosize-textarea';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import moment from 'moment';
 import { addNotes, caughtError, newNoteAdded } from '../../actions';
 import './NoteForm.css';
+
 
 export class NoteForm extends Component {
   constructor() {
@@ -40,6 +42,7 @@ export class NoteForm extends Component {
   handleSubmit = async event => {
     event.preventDefault();
     const { tag, text } = this.state
+    const date = moment().format('MM-DD-YYYY')
 
     try {
       const successState = {
@@ -49,7 +52,7 @@ export class NoteForm extends Component {
         wasSuccessful: true,
       }
 
-      await this.props.addNotes(tag, text)
+      await this.props.addNotes(tag, text, date)
       await this.props.newNoteAdded(true)
       await this.setState(successState)
       this.resetBanner()
@@ -119,7 +122,7 @@ export class NoteForm extends Component {
 }
 
 export const mapDispatchToProps = (dispatch) => ({
-  addNotes: (tag, text) => dispatch(addNotes(tag, text)),
+  addNotes: (tag, text, date) => dispatch(addNotes(tag, text, date)),
   caughtError: (errorMessage) => dispatch(caughtError(errorMessage)),
   newNoteAdded: (bool) => dispatch(newNoteAdded(bool))
 })

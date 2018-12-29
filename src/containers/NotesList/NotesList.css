@@ -1,6 +1,6 @@
 .NotesList {
   height: 100%;
-  width: 100%;
+  width: 150%;
 }
 
 .nl-no-notes h3 {
@@ -23,7 +23,6 @@
   grid-row: 1 / 2;
   background-color: var(--charcoal);
   color: white;
-
 }
 
 .nl-table-rows {
@@ -34,9 +33,8 @@
 .nl-table-setup {
   height: 100%;
   width: 100%;
-  max-width: 350px;
   display: grid;
-  grid-template-columns: 40% repeat(2, 1fr);
+  grid-template-columns: 50% repeat(2, 1fr);
   align-items: center;
   justify-items: center;
   border: 1px solid var(--charcoal);
@@ -45,6 +43,7 @@
 
 .nl-row {
   padding: 15px;
+  align-self: start;
 }
 
 .nl-row:nth-child(even) {
@@ -73,6 +72,13 @@
 .nl-row-note {
   justify-self: start;
   width: 100%;
+  max-width: 262.5px;
   overflow-wrap: break-word;
   line-height: 2;
+}
+
+.nl-row-tag,
+.nl-row-date {
+  align-self: start;
+  padding-top: 8px;
 }

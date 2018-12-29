@@ -14,7 +14,7 @@
 * `npm start`
 
 ## See it live
-![A screen recording of the app](https://github.com/colehart/allyship/blob/master/src/assets/images/screenRecording.gif "App Screen Recording")
+![A screen recording of the app](https://github.com/colehart/nordstrom-notes/blob/master/src/assets/images/screenRecording.gif "App Screen Recording")
 
 ## Technologies Used
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -33,9 +33,9 @@ API created with:
 - AWS API Gateway
 - AWS Lambda
 - AWS Dynamo DB
-
+<!--
 Deployed with:
-- Serverless.js
+- Serverless.js -->
 
 ## Project Requirements
 > Build a simple note taking app which consists of two views:
